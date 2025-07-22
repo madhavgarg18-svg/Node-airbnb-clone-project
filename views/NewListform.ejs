@@ -1,0 +1,61 @@
+<% layout("layouts/biolerplate") -%>
+<body>
+    
+    <h2 class="NewList-heading">Create A new Listing</h2>
+      <section class="Create-list-form">
+        <form action="/listings/NewList" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+            <div>
+                   <label for="title" class="form-label">Titile:</label>
+                   <input type="text"  class="form-control" name="listing[title]" placeholder="Enter title" id="title"  required><br>
+           
+                    <div class="valid-feedback">title Looks good!</div>
+                     <div class="invalid-feedback">title should be text</div>
+            </div>
+            
+            <div>
+                <label for="description" class="form-label">description:</label>
+                <textarea type="text" placeholder="Enter description" class="form-control" name="listing[description]" id="description" pattern="[A-Za-z\s]+"  required></textarea><br>
+
+                 <div class="valid-feedback">description Looks good!</div>
+                 <div class="invalid-feedback">description should be text</div>
+            </div>
+
+
+             <div>
+             <label for="image" class="form-label">Upload image</label>
+             <input type="file" class="form-control"  name="listing[image]" id="image" required>
+             </div><br>
+
+             <div>
+                <label for="location" class="form-label">location:</label>
+                <input type="text" class="form-control" placeholder="Enter location" id="location" name="listing[location]" pattern="[A-Za-z\s]+" required><br>
+                <div class="valid-feedback">Location Looks good!</div>
+                <div class="invalid-feedback">Location bhi should bhi text.</div>
+             </div>
+
+
+            <div class="price-country">
+                <div>
+                    <label for="price" class="form-label">price:</label>
+                    <input type="number" class="form-control" placeholder="Enter price" id="price" name="listing[price]" required ><br>
+                    <div class="valid-feedback">price Looks good!</div>
+                    <div class="invalid-feedback">Please provide a price.</div>
+                </div>
+                
+           
+
+                <div>
+                    <label for="country" class="form-label">country:</label>
+                    <input type="text" class="form-control" placeholder="Enter content" id="country" name="listing[country]" pattern="[A-Za-z\s]+"  required>
+                     <div class="valid-feedback">country Looks good!</div>
+                     <div class="invalid-feedback">Country should be text.</div>
+                </div>
+                
+                
+
+            </div>
+        <button class="btn btn-outline-success">submit</button>
+    </form>
+    </section>
+    <script src="/js/script.js"></script>
+</body>

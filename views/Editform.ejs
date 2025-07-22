@@ -1,0 +1,48 @@
+<% layout("layouts/biolerplate") -%>
+<body>
+    <h2 class="NewList-heading">Edit Listing</h2>
+    <section class="Create-list-form">
+     <form action="/listings/<%= data._id %>?_method=patch" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+
+        <div>
+            <label for="title" class="form-label">Titile:</label>
+            <input type="text" class="form-control" name="listing[title]" placeholder="Enter title" id="title" value="<%= data.title %>" required><br>
+        </div>
+        
+        <div>
+                <label for="description" class="form-label">description:</label>
+                 <input type="text" class="form-control" placeholder="Enter description" name="listing[description]" id="description" value="<%= data.description %>" required><br>
+        </div>
+
+        <div>
+            Orginal Image:<br>
+            <img src="<%= data.image.url %>" alt="image" style="width:200px">
+        </div><br>
+        
+        <div>
+            <label for="image" class="form-label">upload New image</label>
+            <input type="file" class="form-control"  name="listing[image]" id="image" ><br>
+        </div>
+
+       
+        <div class="price-country">
+            <div>
+                   <label for="price" class="form-label">price:</label>
+                    <input type="number" class="form-control" placeholder="Enter price" id="price" name="listing[price]" value="<%= data.price %>" required><br>
+            </div>
+            <div>
+                    <label for="location" class="form-label">location:</label>
+                   <input type="text" class="form-control" placeholder="Enter location" id="location" name="listing[location]" value="<%= data.location %>" required><br>
+            </div>  
+        </div>
+
+        <div>
+            <label for="country" class="form-label">country:</label>
+            <input type="text" class="form-control" placeholder="Enter contery" id="country" name="listing[country]" value="<%= data.country %>" required>
+        </div>
+        
+        <button class="btn btn-outline-success">submit</button>
+    </form>
+   </section> 
+   <script src="/js/script.js"></script>
+</body>

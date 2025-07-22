@@ -1,0 +1,18 @@
+<div class="Flash">
+    <%if(SuccessMsg && SuccessMsg.length){%>
+<div class="alert alert-success alert-dismissible fade show" role="alert" class="success-flash">
+  <%= SuccessMsg %>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<% } %>
+</div>
+
+
+<div class="Flash">
+    <%if(ErrorMsg  && ErrorMsg .length){%>
+<div class="alert alert-danger alert-dismissible fade show" role="alert" class="error-flash">
+  <%= ErrorMsg  %>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<% } %>
+</div>
